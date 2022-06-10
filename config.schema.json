@@ -1,15 +1,57 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "homebridge-miraie",
   "pluginType": "platform",
   "singular": true,
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
+      "mobile": {
+        "title": "MirAIe Authentication Mobile Number",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "placeholder": "Mobile Number"
+      },
+      "password": {
+        "title": "MirAIe Authentication Password",
+        "type": "string",
+        "required": true,
+        "placeholder": "Password"
+      },
+      "mqttBrokerHost": {
+        "title": "MQTT Broker Host",
+        "type": "string",
+        "required": true,
+        "default": "localhost"
+      },
+      "mqttBrokerPort": {
+        "title": "MQTT Broker Port",
+        "type": "integer",
+        "required": true,
+        "default": "1883"
+      },
+      "mqttBrokerUsername": {
+        "title": "MQTT Broker Username",
+        "type": "string",
+        "required": true,
+        "placeholder": "Username"
+      },
+      "mqttBrokerPassword": {
+        "title": "MQTT Broker Password",
+        "type": "string",
+        "required": true,
+        "placeholder": "Password"
+      },
+      "cleanSession": {
+        "title": "Clean Session",
+        "type": "boolean",
+        "required": true,
+        "default": true
+      },
+      "sslTls": {
+        "title": "Use SSl/TLS",
+        "type": "boolean",
+        "required": true,
+        "default": false
       }
     }
   }
